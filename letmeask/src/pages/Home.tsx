@@ -1,3 +1,4 @@
+import {useNavigate} from 'react-router-dom';
 import React from "react"
 import Illustration from '../assets/images/illustration.svg';
 import logo from '../assets/images/logo.svg';
@@ -8,6 +9,15 @@ import {Button} from '../components/Button';
 //webpack (snowpack, vite, ...)
 
 export function Home(){
+
+  
+
+  const navigate = useNavigate();
+
+  const handleCreateRoom = () => {
+    navigate("/rooms/new")   
+  };
+
     return(
         <div id="page-auth">
       <aside>
@@ -21,7 +31,12 @@ export function Home(){
       <main>
         <div className="main-content">
           <img src={logo} alt="" />
-          <button className='create-room'>
+          <button
+              className='create-room'
+              onClick={() => {
+                handleCreateRoom();
+              }}
+          >
             <img src={iconGoogle} alt="Logo do Google"></img>
             Crie sua sala com o Google
           </button>

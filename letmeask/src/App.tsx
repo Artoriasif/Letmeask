@@ -1,14 +1,12 @@
 import React from 'react';
-import { Home } from "./pages/Home";
-import{NewRoom} from "./pages/NewRoom";
+import {AppRouter} from "./routes";
 
-import { Route } from 'react-router-dom';
 
 
 
 function App(){
   return(
-      <NewRoom/>
+     <AppRouter />
   );
 }
 
