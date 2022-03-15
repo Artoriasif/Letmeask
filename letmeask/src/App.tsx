@@ -1,15 +1,14 @@
 import React from 'react';
-import {Button} from './components/Button';
+import { Home } from "./pages/Home";
+import{NewRoom} from "./pages/NewRoom";
+
+import { Route } from 'react-router-dom';
+
+
+
 function App(){
   return(
-    <>
-      <h1>Hello, world!</h1>
-      <Button/>
-      <Button/>
-      <Button/>
-      <Button/>
-    </>
-      
+      <NewRoom/>
   );
 }
 
